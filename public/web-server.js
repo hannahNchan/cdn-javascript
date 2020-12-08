@@ -72,9 +72,11 @@
     const classes = useStyles();
     const [color, setColor] = React.useState(false);
 
-    const handleClick = (color) => {
+    const handleClick = (event, color) => {
+      event.preventDefault();
       setColor(color);
     };
+
     return (
       <div className={classes.top}>
         <Card className={classes.root}>
@@ -97,9 +99,21 @@
           </CardActionArea>
           <CardActions className={classes.hannahContainer}>
             <ButtonGroup color='primary' variant='text' aria-label='contained primary button group'>
-              <Button href='/red' style={{ opacity: color === 'red' ? '1': '0.2' }} className='colorRed' onClick={() => setColor('red')}>Red</Button>
-              <Button href='/green' style={{ opacity: color === 'green' ? '1': '0.2' }} className='colorGreen' onClick={() => setColor('green')}>Green</Button>
-              <Button href='/blue' style={{ opacity: color === 'blue' ? '1': '0.2' }} className='colorBlue' onClick={() => setColor('blue')}>Blue</Button>
+              <Button 
+                href='/red' 
+                style={{ opacity: color === 'red' ? '1': '0.2' }} 
+                className='colorRed' 
+                onClick={(e) => handleClick(event,'red')}>Red</Button>
+              <Button 
+                href='/green' 
+                style={{ opacity: color === 'green' ? '1': '0.2' }} 
+                className='colorGreen' 
+                onClick={(e) => handleClick(event,'green')}>Green</Button>
+              <Button 
+                href='/blue' 
+                style={{ opacity: color === 'blue' ? '1': '0.2' }} 
+                className='colorBlue' 
+                onClick={(e) => handleClick(event, 'blue')}>Blue</Button>
             </ButtonGroup>
           </CardActions>
         </Card>
