@@ -73,7 +73,7 @@
     const [color, setColor] = React.useState(false);
 
     const handleClick = (event, color) => {
-      event.preventDefault();
+      //event.preventDefault();
       setColor(color);
     };
 
