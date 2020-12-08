@@ -97,9 +97,9 @@
           </CardActionArea>
           <CardActions className={classes.hannahContainer}>
             <ButtonGroup color='primary' variant='text' aria-label='contained primary button group'>
-              <Button style={{ opacity: color === 'red' ? '1': '0.2' }} className='colorRed' onClick={() => setColor('red')}>Red</Button>
-              <Button style={{ opacity: color === 'green' ? '1': '0.2' }} className='colorGreen' onClick={() => setColor('green')}>Green</Button>
-              <Button style={{ opacity: color === 'blue' ? '1': '0.2' }} className='colorBlue' onClick={() => setColor('blue')}>Blue</Button>
+              <Button href='/red' style={{ opacity: color === 'red' ? '1': '0.2' }} className='colorRed' onClick={() => setColor('red')}>Red</Button>
+              <Button href='/green' style={{ opacity: color === 'green' ? '1': '0.2' }} className='colorGreen' onClick={() => setColor('green')}>Green</Button>
+              <Button href='/blue' style={{ opacity: color === 'blue' ? '1': '0.2' }} className='colorBlue' onClick={() => setColor('blue')}>Blue</Button>
             </ButtonGroup>
           </CardActions>
         </Card>
