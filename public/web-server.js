@@ -127,7 +127,7 @@
                 <Slider value={value} onChange={handleSliderChange} aria-labelledby="continuous-slider" />
               </div>
               <div>
-                <Icon className="fa fa-plus-circle" style={{ color: green[500] }} />
+                <Icon className="fa fa-plus-circle" style={{ color: 'green' }} />
               </div>
             </div>
             <ButtonGroup color='primary' variant='text' aria-label='contained primary button group'>
