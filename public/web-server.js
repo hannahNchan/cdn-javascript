@@ -128,6 +128,7 @@
               </Grid>
               <Grid item>
                   <Icon className="fa fa-plus-circle" style={{ color: 'green' }} />
+              </Grid>
               <Grid item>
                 <VolumeUp />
               </Grid>
