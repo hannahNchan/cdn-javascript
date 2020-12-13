@@ -25,8 +25,7 @@
     Input,
     VolumeUp,
     Grid,
-    BrightnessLowIcon,
-    BrightnessHighIcon,
+    Icon,
   } = MaterialUI;
 
   const theme = createMuiTheme({
@@ -122,13 +121,13 @@
           <CardActions className={classes.hannahContainer}>
             <div>
               <div>
-                <BrightnessLowIcon />
+                <Icon className="fa fa-plus-circle" />
               </div>
               <div>
                 <Slider value={value} onChange={handleSliderChange} aria-labelledby="continuous-slider" />
               </div>
               <div>
-                <BrightnessHighIcon />
+                <Icon className="fa fa-plus-circle" style={{ color: green[500] }} />
               </div>
             </div>
             <ButtonGroup color='primary' variant='text' aria-label='contained primary button group'>
