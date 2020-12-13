@@ -180,7 +180,7 @@
   ReactDOM.render(
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <div style={{ marginTop: '100px' }}
+      <div style={{ marginTop: '100px' }}>
         <App />
       </div>
     </ThemeProvider>,
