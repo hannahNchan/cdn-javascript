@@ -53,6 +53,7 @@
       display: 'flex',
       alignItems: 'center',
       flexDirection: 'column',
+      marginLeft: '20px',
     },
     media: {
       height: 0,
@@ -103,7 +104,7 @@
     };
 
     return (
-      <Container fixed>
+      <Container>
         <div className={classes.hannahContainerRow} >
         <div className={classes.top}>
           <Card className={classes.root}>
