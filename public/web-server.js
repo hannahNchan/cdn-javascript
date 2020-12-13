@@ -120,17 +120,17 @@
             </CardContent>
           </CardActionArea>
           <CardActions className={classes.hannahContainer}>
-            <Grid container spacing={2}>
-              <Grid item>
+            <div>
+              <div>
                 <BrightnessLowIcon />
-              </Grid>
-              <Grid item xs>
+              </div>
+              <div>
                 <Slider value={value} onChange={handleSliderChange} aria-labelledby="continuous-slider" />
-              </Grid>
-              <Grid item>
+              </div>
+              <div>
                 <BrightnessHighIcon />
-              </Grid>
-            </Grid>
+              </div>
+            </div>
             <ButtonGroup color='primary' variant='text' aria-label='contained primary button group'>
               <Button
                 href='/red'
