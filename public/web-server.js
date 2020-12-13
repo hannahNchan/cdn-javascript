@@ -91,13 +91,13 @@
     function FormRow() {
       return (
         <React.Fragment>
-          <Grid item xs={2}>
+          <Grid item xs={4}>
             <IconButton className="fa fa-sun" style={{ color: 'blue' }} />
           </Grid>
-          <Grid item xs={2}>
+          <Grid item xs={4}>
             <IconButton className="fa fa-sun" style={{ color: 'blue' }} />
           </Grid>
-          <Grid item xs={2}>
+          <Grid item xs={4}>
             <IconButton className="fa fa-sun" style={{ color: 'blue' }} />
           </Grid>
         </React.Fragment>
