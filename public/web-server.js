@@ -119,20 +119,17 @@
             </CardContent>
           </CardActionArea>
           <CardActions className={classes.hannahContainer}>
-            <div>
-              <div>
+            <Grid container spacing={2}>
+              <Grid item>
                 <Icon className="fa fa-plus-circle" />
-              </div>
-              <div>
+              </Grid>
+              <Grid item xs>
                 <Slider value={value} onChange={handleSliderChange} aria-labelledby="continuous-slider" />
-              </div>
-              <div>
-                <Icon className="fa fa-plus-circle" style={{ color: 'green' }} />
-              </div>
-              <div>
-                <VolumeUp />
-              </div>
-            </div>
+              </Grid>
+              <Grid item>
+                  <Icon className="fa fa-plus-circle" style={{ color: 'green' }} />
+              </Grid>
+            </Grid>
             <ButtonGroup color='primary' variant='text' aria-label='contained primary button group'>
               <Button
                 href='/red'
