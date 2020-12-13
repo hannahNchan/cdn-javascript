@@ -25,7 +25,8 @@
     Input,
     VolumeUp,
     Grid,
-    Brightness7Icon,
+    BrightnessLowIcon,
+    BrightnessHighIcon,
   } = MaterialUI;
 
   const theme = createMuiTheme({
@@ -119,7 +120,17 @@
             </CardContent>
           </CardActionArea>
           <CardActions className={classes.hannahContainer}>
-            <Slider value={value} onChange={handleSliderChange} aria-labelledby="continuous-slider" />
+            <Grid container spacing={2}>
+              <Grid item>
+                <BrightnessLowIcon />
+              </Grid>
+              <Grid item xs>
+                <Slider value={value} onChange={handleSliderChange} aria-labelledby="continuous-slider" />
+              </Grid>
+              <Grid item>
+                <BrightnessHighIcon />
+              </Grid>
+            </Grid>
             <ButtonGroup color='primary' variant='text' aria-label='contained primary button group'>
               <Button
                 href='/red'
