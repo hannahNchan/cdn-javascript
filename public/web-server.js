@@ -25,7 +25,9 @@
     Input,
     VolumeUp,
     Grid,
+    Brightness7Icon,
   } = MaterialUI;
+
   const theme = createMuiTheme({
     palette: {
       primary: {
@@ -82,7 +84,7 @@
     },
   }));
 
-  const RecipeReviewCard = () => {
+  const App = () => {
     const classes = useStyles();
     const [color, setColor] = React.useState(false);
     const [value, setValue] = React.useState(30);
@@ -109,6 +111,7 @@
     };
 
     return (
+      <Container fixed>
       <div className={classes.top}>
         <Card className={classes.root}>
           <CardActionArea>
@@ -131,11 +134,11 @@
           <CardActions className={classes.hannahContainer}>
             <div className={classes.volume}>
               <Typography id="input-slider" gutterBottom>
-                Volume
+                Intensity
               </Typography>
               <Grid container spacing={2} alignItems="center">
                 <Grid item>
-                  <VolumeUp />
+                  <Brightness7Icon />
                 </Grid>
                 <Grid item xs>
                   <Slider
@@ -163,34 +166,29 @@
               </Grid>
             </div>
             <ButtonGroup color='primary' variant='text' aria-label='contained primary button group'>
-              <Button 
-                href='/red' 
-                style={{ opacity: color === 'red' ? '1': '0.2' }} 
-                className='colorRed' 
+              <Button
+                href='/red'
+                style={{ opacity: color === 'red' ? '1': '0.2' }}
+                className='colorRed'
                 onClick={(e) => handleClick(event,'red')}>Red</Button>
-              <Button 
-                href='/green' 
-                style={{ opacity: color === 'green' ? '1': '0.2' }} 
-                className='colorGreen' 
+              <Button
+                href='/green'
+                style={{ opacity: color === 'green' ? '1': '0.2' }}
+                className='colorGreen'
                 onClick={(e) => handleClick(event,'green')}>Green</Button>
-              <Button 
-                href='/blue' 
-                style={{ opacity: color === 'blue' ? '1': '0.2' }} 
-                className='colorBlue' 
+              <Button
+                href='/blue'
+                style={{ opacity: color === 'blue' ? '1': '0.2' }}
+                className='colorBlue'
                 onClick={(e) => handleClick(event, 'blue')}>Blue</Button>
             </ButtonGroup>
           </CardActions>
         </Card>
       </div>
+    </Container>
     );
   }
-  const App = () => {
-    return(
-      <Container fixed>
-        <RecipeReviewCard />
-      </Container>
-    );
-  };
+
   ReactDOM.render(
     <ThemeProvider theme={theme}>
       <CssBaseline />
