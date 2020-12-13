@@ -82,9 +82,15 @@
     },
   }));
 
-  const InputSlider = () => {
+  const RecipeReviewCard = () => {
     const classes = useStyles();
+    const [color, setColor] = React.useState(false);
     const [value, setValue] = React.useState(30);
+
+    const handleClick = (event, color) => {
+      //event.preventDefault();
+      setColor(color);
+    };
 
     const handleSliderChange = (event, newValue) => {
       setValue(newValue);
@@ -100,52 +106,6 @@
       } else if (value > 100) {
         setValue(100);
       }
-    };
-
-    return (
-      <div className={classes.root}>
-        <Typography id="input-slider" gutterBottom>
-          Volume
-        </Typography>
-        <Grid container spacing={2} alignItems="center">
-          <Grid item>
-            <VolumeUp />
-          </Grid>
-          <Grid item xs>
-            <Slider
-              value={typeof value === 'number' ? value : 0}
-              onChange={handleSliderChange}
-              aria-labelledby="input-slider"
-            />
-          </Grid>
-          <Grid item>
-            <Input
-              className={classes.input}
-              value={value}
-              margin="dense"
-              onChange={handleInputChange}
-              onBlur={handleBlur}
-              inputProps={{
-                step: 10,
-                min: 0,
-                max: 100,
-                type: 'number',
-                'aria-labelledby': 'input-slider',
-              }}
-            />
-          </Grid>
-        </Grid>
-      </div>
-    );
-  };
-
-  const RecipeReviewCard = () => {
-    const classes = useStyles();
-    const [color, setColor] = React.useState(false);
-
-    const handleClick = (event, color) => {
-      //event.preventDefault();
-      setColor(color);
     };
 
     return (
@@ -169,7 +129,39 @@
             </CardContent>
           </CardActionArea>
           <CardActions className={classes.hannahContainer}>
-            <InputSlider />
+            <div className={classes.volume}>
+              <Typography id="input-slider" gutterBottom>
+                Volume
+              </Typography>
+              <Grid container spacing={2} alignItems="center">
+                <Grid item>
+                  <VolumeUp />
+                </Grid>
+                <Grid item xs>
+                  <Slider
+                    value={typeof value === 'number' ? value : 0}
+                    onChange={handleSliderChange}
+                    aria-labelledby="input-slider"
+                  />
+                </Grid>
+                <Grid item>
+                  <Input
+                    className={classes.input}
+                    value={value}
+                    margin="dense"
+                    onChange={handleInputChange}
+                    onBlur={handleBlur}
+                    inputProps={{
+                      step: 10,
+                      min: 0,
+                      max: 100,
+                      type: 'number',
+                      'aria-labelledby': 'input-slider',
+                    }}
+                  />
+                </Grid>
+              </Grid>
+            </div>
             <ButtonGroup color='primary' variant='text' aria-label='contained primary button group'>
               <Button 
                 href='/red' 
