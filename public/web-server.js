@@ -76,6 +76,11 @@
       alignItems: 'center',
       flexDirection: 'column',
     },
+    hannahContainerRow: {
+      display: 'flex',
+      flexDirection: 'row-reverse',
+      justifyContent: 'center',
+    },
     volume: {
       width: 250,
     },
@@ -99,79 +104,81 @@
 
     return (
       <Container fixed>
-      <div className={classes.top}>
-        <Card className={classes.root}>
-          <CardActionArea>
-            <CardMedia
-              component='img'
-              alt='Contemplative Reptile'
-              image='https://www.trustedreviews.com/wp-content/uploads/sites/54/2019/09/image011-1-1220x851.png'
-              title='Contemplative Reptile'
-            />
-            <CardContent>
-              <Typography gutterBottom variant='h5' component='h2'>
-                Change color
-              </Typography>
-              <Typography variant='body2' color='textSecondary' component='p'>
-                You can select the color, click in button below and choose
-                the right color, then set the color intensity.
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-          <CardActions className={classes.hannahContainer}>
-            <Grid container spacing={2}>
-              <Grid item>
-                <Icon className="fa fa-sun" style={{ color: 'blue' }} />
+        <div className="hannahContainerRow">
+        <div className={classes.top}>
+          <Card className={classes.root}>
+            <CardActionArea>
+              <CardMedia
+                component='img'
+                alt='Contemplative Reptile'
+                image='https://www.trustedreviews.com/wp-content/uploads/sites/54/2019/09/image011-1-1220x851.png'
+                title='Contemplative Reptile'
+              />
+              <CardContent>
+                <Typography gutterBottom variant='h5' component='h2'>
+                  Change color
+                </Typography>
+                <Typography variant='body2' color='textSecondary' component='p'>
+                  You can select the color, click in button below and choose
+                  the right color, then set the color intensity.
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions className={classes.hannahContainer}>
+              <Grid container spacing={2}>
+                <Grid item>
+                  <Icon className="fa fa-sun" style={{ color: 'blue' }} />
+                </Grid>
+                <Grid item xs>
+                  <Slider value={value} onChange={handleSliderChange} aria-labelledby="continuous-slider" />
+                </Grid>
+                <Grid item>
+                    <Icon className="fas fa-sun" style={{ color: 'blue' }} />
+                </Grid>
               </Grid>
-              <Grid item xs>
-                <Slider value={value} onChange={handleSliderChange} aria-labelledby="continuous-slider" />
-              </Grid>
-              <Grid item>
-                  <Icon className="fas fa-sun" style={{ color: 'blue' }} />
-              </Grid>
-            </Grid>
-            <ButtonGroup color='primary' variant='text' aria-label='contained primary button group'>
-              <Button
-                href='/red'
-                style={{ opacity: color === 'red' ? '1': '0.2' }}
-                className='colorRed'
-                onClick={(e) => handleClick(event,'red')}>Red</Button>
-              <Button
-                href='/green'
-                style={{ opacity: color === 'green' ? '1': '0.2' }}
-                className='colorGreen'
-                onClick={(e) => handleClick(event,'green')}>Green</Button>
-              <Button
-                href='/blue'
-                style={{ opacity: color === 'blue' ? '1': '0.2' }}
-                className='colorBlue'
-                onClick={(e) => handleClick(event, 'blue')}>Blue</Button>
-            </ButtonGroup>
-          </CardActions>
-        </Card>
-      </div>
-      <div className={classes.top}>
-        <Card className={classes.root}>
-          <CardActionArea>
-            <CardMedia
-              component='img'
-              alt='Contemplative Reptile'
-              image='https://www.trustedreviews.com/wp-content/uploads/sites/54/2019/09/image011-1-1220x851.png'
-              title='Contemplative Reptile'
-            />
-            <CardContent>
-              <Typography gutterBottom variant='h5' component='h2'>
-                Change color
-              </Typography>
-              <Typography variant='body2' color='textSecondary' component='p'>
-                You can select the color, click in button below and choose
-                the right color, then set the color intensity.
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-          <CardActions className={classes.hannahContainer}>
-          </CardActions>
-        </Card>
+              <ButtonGroup color='primary' variant='text' aria-label='contained primary button group'>
+                <Button
+                  href='/red'
+                  style={{ opacity: color === 'red' ? '1': '0.2' }}
+                  className='colorRed'
+                  onClick={(e) => handleClick(event,'red')}>Red</Button>
+                <Button
+                  href='/green'
+                  style={{ opacity: color === 'green' ? '1': '0.2' }}
+                  className='colorGreen'
+                  onClick={(e) => handleClick(event,'green')}>Green</Button>
+                <Button
+                  href='/blue'
+                  style={{ opacity: color === 'blue' ? '1': '0.2' }}
+                  className='colorBlue'
+                  onClick={(e) => handleClick(event, 'blue')}>Blue</Button>
+              </ButtonGroup>
+            </CardActions>
+          </Card>
+        </div>
+        <div className={classes.top}>
+          <Card className={classes.root}>
+            <CardActionArea>
+              <CardMedia
+                component='img'
+                alt='Contemplative Reptile'
+                image='https://www.trustedreviews.com/wp-content/uploads/sites/54/2019/09/image011-1-1220x851.png'
+                title='Contemplative Reptile'
+              />
+              <CardContent>
+                <Typography gutterBottom variant='h5' component='h2'>
+                  Change color
+                </Typography>
+                <Typography variant='body2' color='textSecondary' component='p'>
+                  You can select the color, click in button below and choose
+                  the right color, then set the color intensity.
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions className={classes.hannahContainer}>
+            </CardActions>
+          </Card>
+        </div>
       </div>
     </Container>
     );
