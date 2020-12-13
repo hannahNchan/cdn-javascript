@@ -97,18 +97,6 @@
       setValue(newValue);
     };
 
-    const handleInputChange = (event) => {
-      setValue(event.target.value === '' ? '' : Number(event.target.value));
-    };
-
-    const handleBlur = () => {
-      if (value < 0) {
-        setValue(0);
-      } else if (value > 100) {
-        setValue(100);
-      }
-    };
-
     return (
       <Container fixed>
       <div className={classes.top}>
@@ -131,6 +119,7 @@
             </CardContent>
           </CardActionArea>
           <CardActions className={classes.hannahContainer}>
+            <Slider value={value} onChange={handleSliderChange} aria-labelledby="continuous-slider" />
             <ButtonGroup color='primary' variant='text' aria-label='contained primary button group'>
               <Button
                 href='/red'
