@@ -90,7 +90,6 @@
     const [value, setValue] = React.useState(30);
 
     const handleClick = (event, color) => {
-      //event.preventDefault();
       setColor(color);
     };
 
@@ -144,7 +143,6 @@
                   <Slider
                     value={typeof value === 'number' ? value : 0}
                     onChange={handleSliderChange}
-                    aria-labelledby="input-slider"
                   />
                 </Grid>
                 <Grid item>
@@ -159,7 +157,6 @@
                       min: 0,
                       max: 100,
                       type: 'number',
-                      'aria-labelledby': 'input-slider',
                     }}
                   />
                 </Grid>
