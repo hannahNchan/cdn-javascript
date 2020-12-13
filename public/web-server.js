@@ -26,7 +26,6 @@
     VolumeUp,
     Grid,
     Icon,
-    IconButton,
   } = MaterialUI;
 
   const theme = createMuiTheme({
