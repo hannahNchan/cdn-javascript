@@ -44,6 +44,9 @@
     },
     top: {
       marginTop: '100px',
+      display: 'flex',
+      alignItems: 'center',
+      flexDirection: 'column',
     },
     media: {
       height: 0,
