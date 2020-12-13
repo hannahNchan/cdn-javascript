@@ -124,10 +124,11 @@
                 <Icon className="fa fa-plus-circle" />
               </Grid>
               <Grid item xs>
-            <Slider value={value} onChange={handleSliderChange} aria-labelledby="continuous-slider" />
+                <Slider value={value} onChange={handleSliderChange} aria-labelledby="continuous-slider" />
               </Grid>
               <Grid item>
                   <Icon className="fa fa-plus-circle" style={{ color: 'green' }} />
+              <Grid item>
                 <VolumeUp />
               </Grid>
             </Grid>
