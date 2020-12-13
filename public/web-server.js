@@ -26,6 +26,7 @@
     VolumeUp,
     Grid,
     Icon,
+    IconButton,
   } = MaterialUI;
 
   const theme = createMuiTheme({
@@ -88,12 +89,34 @@
     input: {
       width: 42,
     },
+    icon: {
+      padding: theme.spacing(1),
+      textAlign: 'center',
+      borderRadius: '100px',
+      border: 'solid 1px black'
+    },
   }));
 
   const App = () => {
     const classes = useStyles();
     const [color, setColor] = React.useState(false);
     const [value, setValue] = React.useState(30);
+
+    function FormRow() {
+      return (
+        <React.Fragment>
+          <Grid item xs={2}>
+            <IconButton className="fa fa-sun" style={{ color: 'blue' }} />
+          </Grid>
+          <Grid item xs={2}>
+            <IconButton className="fa fa-sun" style={{ color: 'blue' }} />
+          </Grid>
+          <Grid item xs={2}>
+            <IconButton className="fa fa-sun" style={{ color: 'blue' }} />
+          </Grid>
+        </React.Fragment>
+      );
+    }
 
     const handleClick = (event, color) => {
       setColor(color);
@@ -170,10 +193,23 @@
                 <Typography gutterBottom variant='h5' component='h2'>
                   Change color
                 </Typography>
-                <Typography variant='body2' color='textSecondary' component='p'>
-                  You can select the color, click in button below and choose
-                  the right color, then set the color intensity.
-                </Typography>
+                  <div>
+                    {['blockOne','blockTwo','blockThree'].map((it,idx) => {
+                      return (
+                        <Grid container spacing={1} key={idx}>
+                          <Grid container item xs={12} spacing={3}>
+                            <FormRow id={it}/>
+                          </Grid>
+                          <Grid container item xs={12} spacing={3}>
+                            <FormRow id={it}/>
+                          </Grid>
+                          <Grid container item xs={12} spacing={3}>
+                            <FormRow id={it}/>
+                          </Grid>
+                        </Grid>
+                      )
+                    })}
+                  </div>
               </CardContent>
             </CardActionArea>
             <CardActions className={classes.hannahContainer}>
