@@ -79,7 +79,7 @@
     },
     hannahContainerRow: {
       display: 'flex',
-      flexDirection: 'row-reverse',
+      flexDirection: 'row',
       justifyContent: 'center',
     },
     volume: {
