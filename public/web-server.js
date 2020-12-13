@@ -49,7 +49,7 @@
       maxWidth: 345,
     },
     top: {
-      marginTop: '100px',
+      //marginTop: '100px',
       display: 'flex',
       alignItems: 'center',
       flexDirection: 'column',
@@ -180,7 +180,9 @@
   ReactDOM.render(
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <App />
+      <div style={{ marginTop: '100px' }}
+        <App />
+      </div>
     </ThemeProvider>,
     document.querySelector('#root'),
   );
