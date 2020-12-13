@@ -131,37 +131,6 @@
             </CardContent>
           </CardActionArea>
           <CardActions className={classes.hannahContainer}>
-            <div className={classes.volume}>
-              <Typography id="input-slider" gutterBottom>
-                Intensity
-              </Typography>
-              <Grid container spacing={2} alignItems="center">
-                <Grid item>
-                  <Brightness7Icon />
-                </Grid>
-                <Grid item xs>
-                  <Slider
-                    value={typeof value === 'number' ? value : 0}
-                    onChange={handleSliderChange}
-                  />
-                </Grid>
-                <Grid item>
-                  <Input
-                    className={classes.input}
-                    value={value}
-                    margin="dense"
-                    onChange={handleInputChange}
-                    onBlur={handleBlur}
-                    inputProps={{
-                      step: 10,
-                      min: 0,
-                      max: 100,
-                      type: 'number',
-                    }}
-                  />
-                </Grid>
-              </Grid>
-            </div>
             <ButtonGroup color='primary' variant='text' aria-label='contained primary button group'>
               <Button
                 href='/red'
