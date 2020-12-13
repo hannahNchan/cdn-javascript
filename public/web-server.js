@@ -59,19 +59,6 @@
       height: 0,
       paddingTop: '56.25%', // 16:9
     },
-    expand: {
-      transform: 'rotate(0deg)',
-      marginLeft: 'auto',
-      transition: theme.transitions.create('transform', {
-        duration: theme.transitions.duration.shortest,
-      }),
-    },
-    expandOpen: {
-      transform: 'rotate(180deg)',
-    },
-    avatar: {
-      backgroundColor: 'red',
-    },
     hannahContainer: {
       display: 'flex',
       alignItems: 'center',
@@ -181,13 +168,6 @@
         </div>
         <div className={classes.top}>
           <Card className={classes.root}>
-            <CardActionArea>
-              <CardMedia
-                component='img'
-                alt='Contemplative Reptile'
-                image='https://www.trustedreviews.com/wp-content/uploads/sites/54/2019/09/image011-1-1220x851.png'
-                title='Contemplative Reptile'
-              />
               <CardContent>
                 <Typography gutterBottom variant='h5' component='h2'>
                   Change color
@@ -210,7 +190,6 @@
                     })}
                   </div>
               </CardContent>
-            </CardActionArea>
             <CardActions className={classes.hannahContainer}>
             </CardActions>
           </Card>
