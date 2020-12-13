@@ -104,7 +104,7 @@
 
     return (
       <Container fixed>
-        <div className="hannahContainerRow">
+        <div className={classes.hannahContainerRow} >
         <div className={classes.top}>
           <Card className={classes.root}>
             <CardActionArea>
