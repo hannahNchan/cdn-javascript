@@ -24,6 +24,7 @@
     Slider,
     Input,
     VolumeUp,
+    Grid,
   } = MaterialUI;
   const theme = createMuiTheme({
     palette: {
