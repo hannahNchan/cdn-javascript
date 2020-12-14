@@ -213,12 +213,6 @@ const control = {
                           <Grid container item xs={12} spacing={3}>
                             <FormRow id={it} />
                           </Grid>
-                          <Grid container item xs={12} spacing={3}>
-                            <FormRow id={it} />
-                          </Grid>
-                          <Grid container item xs={12} spacing={3}>
-                            <FormRow id={it} />
-                          </Grid>
                         </Grid>
                       );
                     })}
