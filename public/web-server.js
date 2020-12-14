@@ -55,7 +55,7 @@ const control = {
     "chartreuse",
     "orange",
     "cyan",
-    "springGreen",
+    "spring-green",
     "teal",
     "celeste",
     "purple",
@@ -130,7 +130,7 @@ const control = {
         {control[id].map(i => {
           return (
             <Grid item xs={4}>
-              <IconButton className={classes.icon}>{i}</IconButton>
+              <IconButton className={`${classes.icon} ${i}`} />
             </Grid>
           )
         })}
