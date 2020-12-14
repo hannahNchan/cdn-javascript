@@ -28,6 +28,42 @@
     Icon,
   } = MaterialUI;
 
+const control = {
+  ac: [
+    "brightness-up",
+    "brightness-down",
+    "on",
+    "auto",
+    "four-hours",
+    "off",
+    "six-hours",
+    "eight-hours",
+    "white"
+  ],
+  pr: [
+    "red",
+    "green",
+    "blue",
+    "cyan",
+    "azure",
+    "violet",
+    "rose",
+    "magenta",
+    "yellow"
+  ],
+  te: [
+    "chartreuse",
+    "orange",
+    "cyan",
+    "springGreen",
+    "teal",
+    "celeste",
+    "purple",
+    "vermilion",
+    "amber"
+  ]
+};
+
   const theme = createMuiTheme({
     palette: {
       primary: {
@@ -88,21 +124,19 @@
     const [color, setColor] = React.useState(false);
     const [value, setValue] = React.useState(30);
 
-    function FormRow() {
-      return (
-        <React.Fragment>
-          <Grid item xs={4}>
-            <IconButton className="fa fa-sun" style={{ color: 'blue' }} />
-          </Grid>
-          <Grid item xs={4}>
-            <IconButton className="fa fa-sun" style={{ color: 'blue' }} />
-          </Grid>
-          <Grid item xs={4}>
-            <IconButton className="fa fa-sun" style={{ color: 'blue' }} />
-          </Grid>
-        </React.Fragment>
-      );
-    }
+  function FormRow({ id }) {
+    return (
+      <React.Fragment>
+        {control[id].map(i => {
+          return (
+            <Grid item xs={4}>
+              <IconButton className={classes.icon}>{i}</IconButton>
+            </Grid>
+          )
+        })}
+      </React.Fragment>
+    );
+  }
 
     const handleClick = (event, color) => {
       setColor(color);
@@ -173,20 +207,20 @@
                   Change color
                 </Typography>
                   <div>
-                    {['blockOne','blockTwo','blockThree'].map((it,idx) => {
+                    {["ac", "pr", "te"].map((it, idx) => {
                       return (
                         <Grid container spacing={1} key={idx}>
                           <Grid container item xs={12} spacing={3}>
-                            <FormRow id={it}/>
+                            <FormRow id={it} />
                           </Grid>
                           <Grid container item xs={12} spacing={3}>
-                            <FormRow id={it}/>
+                            <FormRow id={it} />
                           </Grid>
                           <Grid container item xs={12} spacing={3}>
-                            <FormRow id={it}/>
+                            <FormRow id={it} />
                           </Grid>
                         </Grid>
-                      )
+                      );
                     })}
                   </div>
               </CardContent>
