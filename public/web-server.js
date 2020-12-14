@@ -115,7 +115,6 @@ const control = {
       padding: theme.spacing(1),
       textAlign: 'center',
       borderRadius: '100px',
-      border: 'solid 1px black'
     },
   }));
 
