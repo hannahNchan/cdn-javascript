@@ -137,6 +137,7 @@ const control = {
     );
   }
 
+    console.log('hola mundo')
     const handleClick = (event, color) => {
       setColor(color);
     };
